@@ -1,4 +1,3 @@
-// components/TrainingConsultant.js
 'use client';
 
 import Link from 'next/link';
@@ -10,7 +9,7 @@ export default function TrainingConsultant() {
       <section className="w-full py-16 bg-gray-50">
         <div className="w-full">
           <div className="bg-[#5712441A] rounded-t-3xl p-6 sm:p-8 md:p-12">
-            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1312px] mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-6 sm:mb-8">
                 <h2 className="text-[#151515] text-[40px] font-semibold leading-[130%] tracking-normal mb-2">
                   Training The Consultant
@@ -80,8 +79,8 @@ export default function TrainingConsultant() {
 
       {/* CTA Section */}
       <section className="w-full py-16 bg-gray-50">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#571244] rounded-lg w-full max-w-[1134px] mx-auto h-[204px] gap-8 p-2 text-center flex flex-col items-center justify-center">
+        <div className="max-w-[1312px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#571244] rounded-lg w-full h-[204px] gap-8 p-2 text-center flex flex-col items-center justify-center">
             <p className="text-white text-[20px] font-semibold leading-[150%] tracking-[3%] text-center">
               Want to accelerate professional growth and development at your organization?<br />
               See how we can help.

@@ -6,6 +6,8 @@ import Training from   '../components/Training';
 import Program from   '../components/Program';
 import Transformation from   '../components/TransformationHub';
 import TrainingConsultant from   '../components/TrainingConsultant';
+import Testimonials from   '../components/Testimonials';
+import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
@@ -17,6 +19,8 @@ export default function Home() {
       <Program/>
       <Transformation/>
       <TrainingConsultant/>
+      <Testimonials/>
+      <Footer/>
     </>
 
   );
