@@ -86,7 +86,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <div className="relative" ref={accountDropdownRef}>
               <button
                 onClick={handleAccountDropdownToggle}
@@ -125,21 +125,21 @@ export default function Header() {
             >
               Take Assessment
             </Link>
-
-            <button
-              type="button"
-              className="lg:hidden inline-flex items-center justify-center rounded-md p-2 bg-black text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black ml-1"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-label="Toggle navigation menu"
-            >
-              {mobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
           </div>
+
+          <button
+            type="button"
+            className="lg:hidden inline-flex items-center justify-center rounded-md p-2 bg-black text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black ml-1"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? (
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
         </div>
       </div>
 
@@ -268,43 +268,51 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <div className="pt-3 mt-2 border-t border-gray-200 space-y-2">
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 text-[16px] font-normal text-[#151515] hover:text-[#571244] hover:bg-gray-50 rounded-md px-3 py-2 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+              
+              <div className="pt-3 mt-2 border-t border-gray-200">
+                <button
+                  onClick={() => {
+                    setOpenDropdown(openDropdown === 'mobileAccount' ? null : 'mobileAccount');
+                  }}
+                  className="flex items-center justify-between w-full text-[18px] font-normal text-[#151515] hover:text-[#571244] hover:bg-gray-50 rounded-md px-3 py-2 transition-colors"
                 >
-                  <div className="bg-[#571244] rounded-full p-1">
-                    <UserIcon className="h-4 w-4 text-white" />
+                  <div className="flex items-center gap-2">
+                    <div className="bg-[#571244] rounded-full p-1">
+                      <UserIcon className="h-4 w-4 text-white" />
+                    </div>
+                    Account
                   </div>
-                  My Profile
-                </Link>
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 text-[16px] font-normal text-[#151515] hover:text-[#571244] hover:bg-gray-50 rounded-md px-3 py-2 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <div className="bg-[#EF4353] rounded-full p-1">
-                    <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                    </svg>
+                  <ChevronDownIcon className={`h-4 w-4 transition-transform ${openDropdown === 'mobileAccount' ? 'rotate-180' : ''}`} />
+                </button>
+                {openDropdown === 'mobileAccount' && (
+                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-gray-200 pl-3">
+                    {accountDropdownItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block text-[16px] font-normal text-[#151515] hover:text-[#571244] py-2 transition-colors"
+                        onClick={() => {
+                          setOpenDropdown(null);
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
                   </div>
-                  Take Assessment
-                </Link>
+                )}
               </div>
-              <div className="pt-2 space-y-1">
-                <p className="text-xs font-semibold text-[#571244] px-3 py-1">Account Menu</p>
-                {accountDropdownItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block text-[14px] font-normal text-[#151515] hover:text-[#571244] hover:bg-gray-50 rounded-md px-3 py-2 transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+
+              <Link
+                href="/"
+                className="flex items-center gap-2 text-[18px] font-normal text-white bg-[#EF4353] hover:bg-[#d63a48] rounded-md px-3 py-2 transition-colors mt-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                Take Assessment
+              </Link>
             </div>
           </div>
         )}

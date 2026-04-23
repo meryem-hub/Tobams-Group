@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function TransformationHub() {
   return (
     <section className="w-full py-16">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#EF435333] rounded-3xl p-6 sm:p-8 md:p-12">
           <div className="mb-6 sm:mb-8">
             <h2 className="text-[#1671D9] text-[18px] sm:text-[20px] font-semibold italic leading-[130%] tracking-normal mb-2">
