@@ -72,13 +72,13 @@ export default function Header() {
         <div className="flex items-center justify-between py-1">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/Logo.png"
-                alt="Tobams Group Logo"
-                width={180}
-                height={60}
-                className="w-[165px] h-[100px]"                
-              />
+        <Image
+  src="/Logo.png"
+  alt="Tobams Group Logo"
+  width={70}
+  height={70}
+  className="w-auto object-contain"
+/>
             </Link>
           </div>
 
