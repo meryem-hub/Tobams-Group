@@ -1,4 +1,3 @@
-// components/Training.js
 'use client';
 
 import Image from 'next/image';

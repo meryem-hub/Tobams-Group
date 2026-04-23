@@ -1,10 +1,9 @@
-// components/Management.js
 'use client';
 
 import Image from 'next/image';
 import { BoltIcon } from '@heroicons/react/24/solid';
 
-export default function Management() {
+export default function Program() {
   return (
     <section className="w-full py-16">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
