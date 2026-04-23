@@ -23,7 +23,7 @@ export default function Hero() {
         {/* What We Do Badge */}
         <div className="flex justify-center mb-6">
           <Link
-            href="/what-we-do"
+            href="/"
             className="inline-flex items-center justify-center w-[193px] h-[45px] rounded-full bg-white/20 backdrop-blur-sm text-white font-medium hover:bg-white/30 border border-white/30 px-12 py-3"
           >
             What We Do
