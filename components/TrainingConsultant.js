@@ -8,7 +8,7 @@ export default function TrainingConsultant() {
     <>
       <section className="w-full py-16 bg-gray-50">
         <div className="w-full">
-          <div className="bg-[#5712441A] rounded-t-3xl p-6 sm:p-8 md:p-12">
+          <div className="bg-[#5712441A]  p-6 sm:p-8 md:p-12">
             <div className="max-w-[1312px] mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-6 sm:mb-8">
                 <h2 className="text-[#151515] text-[40px] font-semibold leading-[130%] tracking-normal mb-2">
