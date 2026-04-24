@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+◆ A Tobams Group landing page built from a Figma design. Took about 2 days. Made sure everything lines up - spacing colors, fonts, all of it.
 
-First, run the development server:
+◆ **Figma:** [Link](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0)
+
+---
+
+## How to run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+What's inside
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+◆ Header with dropdowns (About, What We Do, Account)
+◆ Hero section with background image
+◆ LMS section with circular image
+◆ Training section (Corporate, Individual, Capacity)
+◆ Management program (dark theme)
+◆ CEO webinar section
+◆ Training consultant section
+◆ Testimonials (scrollable cards)
+◆ Footer (redesigned)
 
-## Learn More
+All components are separate files under /components.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+What I refactored
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+◆ Footer redesign - Took the basic footer from Figma and completely elevated it. Added glass-morphism cards, hover animations (rotate, scale, slide), gradient backgrounds, glow effects, and interactive contact cards. Same information, just more polished and premium.
 
-## Deploy on Vercel
+◆ Testimonial scroll - Horizontal scrolling cards with hidden scrollbar. Clean and functional.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+◆ Custom border radius - Images use specific corner radii: 56px, 24px, 23px, 12px
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+◆ Responsive breakpoints - Works perfectly at 425px, 768px, and 1280px+
+
+---
+
+Custom CSS I wrote
+
+◆ Used plain CSS for animations that Tailwind couldn't handle & for scroll.
+
+◆ Everything else is 100% Tailwind CSS. No inline styles.
+
+---
+
+How I used AI
+
+◆ Used AI coding tools for rapid prototyping and boilerplate generation
+
+
+◆ Every line of code was reviewed, tested, and customized to match the exact design requirements.
+
+◆ The footer redesign was my own creative direction - AI helped with implementation, but the design decisions were mine.
+
+---
+
+Details I focused on
+
+Typography
+◆ Headings: Nunito (600/700 weight)
+◆ Body text: Nunito Sans (400 weight)
+◆ Exact sizes: 40px, 32px, 18px
+
+Colors
+◆ Primary: #571244
+◆ Secondary: #EF4353
+◆ Dark BGs: #2C0922, #11040E, #1D0617
+
+Responsive
+◆ Phone: 425px
+◆ Tablet: 768px
+◆ Desktop: 1280px+
+◆ Used Tailwind's sm/md/lg prefixes exclusively
+
+Custom border radius on images
+◆ rounded-tl-[56px] rounded-tr-[24px] rounded-br-[23px] rounded-bl-[12px]
+
+---
+
+Deployment
+
+◆ Live on Vercel.
+
+---
+
+Note
+
+◆ All internal links go to / since this is just the frontend.
+
