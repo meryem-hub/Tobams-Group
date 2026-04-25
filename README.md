@@ -1,5 +1,5 @@
 
-◆ A Tobams Group landing page built from a Figma design. Took about 2 days. Made sure everything lines up - spacing colors, fonts, all of it.
+◆ A Tobams Group landing page built from a Figma design.Made sure everything lines up - spacing colors, fonts, all of it.
 
 ◆ **Figma:** [Link](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0)
 
